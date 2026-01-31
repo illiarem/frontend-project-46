@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-// console.log('Wow!')
+import { program } from 'commander'
+import parseDate from './dataParsing.js'
 
-import { Command } from 'commander'
-const program = new Command()
 program
   .version('0.0.1')
   .description('Compares two configuration files and shows a difference.')
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format [type]', 'output format')
+  .action((filepath1, filepath2) => {
+    parseDate(filepath1, filepath2)
+  })
 
 program.parse()
