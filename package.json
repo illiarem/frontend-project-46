@@ -2,6 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/illiarem/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/illiarem/frontend-project-46/actions)",
+  "bin": {
+    "gendiff": "./gendiff.js"
+  },
   "homepage": "https://github.com/illiarem/frontend-project-46#readme",
   "bugs": {
     "url": "https://github.com/illiarem/frontend-project-46/issues"
@@ -18,7 +21,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "commander": "^14.0.2"
+    "commander": "^14.0.2",
+    "lodash": "^4.17.23"
   },
   "devDependencies": {
     "@eslint/create-config": "^1.11.0",
