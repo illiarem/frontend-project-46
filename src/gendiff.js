@@ -2,7 +2,7 @@ import { Command } from 'commander'
 import { parseDate } from './dataParsing.js'
 import { compareJSONs } from './comparisonJSONs.js'
 
-export default () => {
+export const createProgram = () => {
   const program = new Command()
   program
     .version('0.0.1')
