@@ -6,4 +6,12 @@ import stylistic from '@stylistic/eslint-plugin'
 export default defineConfig([
   stylistic.configs.recommended,
   { files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'], languageOptions: { globals: globals.node } },
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest, // Это "разрешит" beforeEach и остальные функции Jest
+      },
+    },
+  },
 ])
