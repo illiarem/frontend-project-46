@@ -6,9 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-         run: npm ci
+        run: npm ci
       - name: Run Lint
-         run: make lint
+        run: make lint
       - name: Run Tests
-         run: make test
+        run: make test
 
