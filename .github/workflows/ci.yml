@@ -1,0 +1,14 @@
+name: Tests and Linter
+on: push
+jobs:
+  test-linter-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+         run: npm ci
+      - name: Run Lint
+         run: make lint
+      - name: Run Tests
+         run: make test
+
