@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-export const compareJSONs = (obj1, obj2) => {
+export const compare = (obj1, obj2) => {
   const sortedKeys = _.sortBy([...new Set([...Object.keys(obj1), ...Object.keys(obj2)])])
   const result = sortedKeys.map((key) => {
     if (!Object.hasOwn(obj2, key)) {
