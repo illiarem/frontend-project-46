@@ -19,7 +19,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "test:coverage": "jest --coverage --coverageReporters='lcov'",
+    "test:coverage": "jest --coverage --coverageReporters='lcov' --coverageReporters='text'",
     "lint": "eslint .",
     "lint-fix": "eslint --fix ."
   },

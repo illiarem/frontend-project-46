@@ -8,4 +8,4 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=illiarem_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=illiarem_frontend-project-46)
 
 ## example
-[![asciicast](https://asciinema.org/a/idsTW6KLHTbsq4Mj.svg)](https://asciinema.org/a/idsTW6KLHTbsq4Mj)
+[![asciicast](https://asciinema.org/a/cUYmGDGjp1NE2pXa.svg)](https://asciinema.org/a/cUYmGDGjp1NE2pXa)

@@ -1,6 +1,6 @@
 import { parse } from './parsers.js'
 import { compare } from './comparison.js'
-import { formatData } from './formatters/formatter.js'
+import { formatData } from './formatters/index.js'
 
 import * as fs from 'node:fs'
 import { cwd } from 'node:process'
