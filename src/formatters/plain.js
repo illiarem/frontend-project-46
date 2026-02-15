@@ -23,8 +23,10 @@ export const formatPlain = (data) => {
           return 'unchanged'
         case 'changed':
           return `Property '${property}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`
-        case 'object inside':
+        case 'nested':
           return iter(children, `${property}`)
+        default:
+          throw new Error(`Unknown type: ${type}`)
       }
     }).filter(line => line !== 'unchanged')
 

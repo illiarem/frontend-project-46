@@ -14,7 +14,7 @@ export const compare = (obj1, obj2) => {
       node.value = obj2[key]
     }
     else if (_.isObject(obj1[key]) && _.isObject(obj2[key])) {
-      node.type = 'object inside'
+      node.type = 'nested'
       node.children = compare(obj1[key], obj2[key])
     }
     else if (obj1[key] === obj2[key]) {

@@ -32,8 +32,10 @@ export const formatStylish = (data) => {
         case 'changed':
           return [`${signIndent}- ${key}: ${stringify(oldValue, depth + 1)}`,
             `${signIndent}+ ${key}: ${stringify(newValue, depth + 1)}`].join('\n')
-        case 'object inside':
+        case 'nested':
           return `${signIndent}  ${key}: ${iter(children, depth + 1)}`
+        default:
+          throw new Error(`Unknown type: ${type}`)
       }
     })
     return ['{', ...result, `${bracketIndent}}`].join('\n')
