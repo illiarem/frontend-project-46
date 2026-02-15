@@ -9,26 +9,42 @@ const readFile = filename => fs.readFileSync(getFixturePath(filename), 'utf-8')
 
 let file1JsonPath, file2JsonPath
 let file1YmlPath, file2YmlPath
-let expected
+let expected_stylish
+let expected_plain
 
 beforeEach(() => {
   file1JsonPath = getFixturePath('file1.json')
   file2JsonPath = getFixturePath('file2.json')
   file1YmlPath = getFixturePath('file1.yml')
   file2YmlPath = getFixturePath('file2.yaml')
-  expected = readFile('expected_stylish.txt')
+  expected_stylish = readFile('expected_stylish.txt')
+  expected_plain = readFile('expected_plain.txt')
 })
 
 describe('stylish format', () => {
   test('should work with JSON files', () => {
-    expect(genDiff(file1JsonPath, file2JsonPath, 'stylish')).toEqual(expected)
+    expect(genDiff(file1JsonPath, file2JsonPath, 'stylish')).toEqual(expected_stylish)
   })
 
   test('should work with YAML files', () => {
-    expect(genDiff(file1YmlPath, file2YmlPath, 'stylish')).toEqual(expected)
+    expect(genDiff(file1YmlPath, file2YmlPath, 'stylish')).toEqual(expected_stylish)
   })
 
   test('should work with mixed formats (json and yaml)', () => {
-    expect(genDiff(file1JsonPath, file2YmlPath, 'stylish')).toEqual(expected)
+    expect(genDiff(file1JsonPath, file2YmlPath, 'stylish')).toEqual(expected_stylish)
+  })
+})
+
+describe('plain format', () => {
+  test('should work with JSON files', () => {
+    expect(genDiff(file1JsonPath, file2JsonPath, 'plain')).toEqual(expected_plain)
+  })
+
+  test('should work with YAML files', () => {
+    expect(genDiff(file1YmlPath, file2YmlPath, 'plain')).toEqual(expected_plain)
+  })
+
+  test('should work with mixed formats (json and yaml)', () => {
+    expect(genDiff(file1JsonPath, file2YmlPath, 'plain')).toEqual(expected_plain)
   })
 })
