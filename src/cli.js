@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import { genDiff } from './index.js'
+import genDiff from './index.js'
 
 export const createProgram = () => {
   const program = new Command()

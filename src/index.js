@@ -6,7 +6,7 @@ import * as fs from 'node:fs'
 import { cwd } from 'node:process'
 import path from 'node:path'
 
-export const genDiff = (filepath1, filepath2, format) => {
+export default (filepath1, filepath2, format) => {
   const data1 = fs.readFileSync(path.resolve(cwd(), filepath1), 'utf8')
   const data2 = fs.readFileSync(path.resolve(cwd(), filepath2), 'utf8')
 
