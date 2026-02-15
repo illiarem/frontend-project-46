@@ -11,6 +11,7 @@ let file1JsonPath, file2JsonPath
 let file1YmlPath, file2YmlPath
 let expected_stylish
 let expected_plain
+let expected_json
 
 beforeEach(() => {
   file1JsonPath = getFixturePath('file1.json')
@@ -19,6 +20,7 @@ beforeEach(() => {
   file2YmlPath = getFixturePath('file2.yaml')
   expected_stylish = readFile('expected_stylish.txt')
   expected_plain = readFile('expected_plain.txt')
+  expected_json = readFile('expected_json.txt')
 })
 
 describe('stylish format', () => {
@@ -38,6 +40,20 @@ describe('stylish format', () => {
 describe('plain format', () => {
   test('should work with JSON files', () => {
     expect(genDiff(file1JsonPath, file2JsonPath, 'plain')).toEqual(expected_plain)
+  })
+
+  test('should work with YAML files', () => {
+    expect(genDiff(file1YmlPath, file2YmlPath, 'plain')).toEqual(expected_plain)
+  })
+
+  test('should work with mixed formats (json and yaml)', () => {
+    expect(genDiff(file1JsonPath, file2YmlPath, 'plain')).toEqual(expected_plain)
+  })
+})
+
+describe('json format', () => {
+  test('should work with JSON files', () => {
+    expect(genDiff(file1JsonPath, file2JsonPath, 'json')).toEqual(expected_json)
   })
 
   test('should work with YAML files', () => {
