@@ -1,7 +1,7 @@
-import _ from 'lodash'
+const isObject = data => Object.prototype.toString.call(data) === '[object Object]'
 
 const stringify = (value, depth) => {
-  if (!_.isObject(value)) return `${value}`
+  if (!isObject(value)) return `${value}`
 
   const spacesCount = 4
   const keyIndent = ' '.repeat(depth * spacesCount)

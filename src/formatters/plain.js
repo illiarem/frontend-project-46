@@ -1,7 +1,7 @@
-import _ from 'lodash'
+const isObject = data => Object.prototype.toString.call(data) === '[object Object]'
 
 const stringify = (value) => {
-  if (_.isObject(value)) {
+  if (isObject(value)) {
     return '[complex value]'
   }
   else {

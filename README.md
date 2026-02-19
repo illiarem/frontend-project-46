@@ -7,17 +7,11 @@
 ### SonarQube status:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=illiarem_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=illiarem_frontend-project-46)
 
-## example 1
-[![asciicast](https://asciinema.org/a/nWdYfWywHoZUrsJd.svg)](https://asciinema.org/a/nWdYfWywHoZUrsJd)
+## request help and compare two files (default format)
+[![asciicast](https://asciinema.org/a/NQMLkEPvxhZ5xLfC.svg)](https://asciinema.org/a/NQMLkEPvxhZ5xLfC)
 
-## example 2
-[![asciicast](https://asciinema.org/a/zfhH1rOQEXV272U3.svg)](https://asciinema.org/a/zfhH1rOQEXV272U3)
+## compare files with the same or different extensions
+[![asciicast](https://asciinema.org/a/IIRng6VK0V9eZQTW.svg)](https://asciinema.org/a/IIRng6VK0V9eZQTW)
 
-## example 3
-[![asciicast](https://asciinema.org/a/idsTW6KLHTbsq4Mj.svg)](https://asciinema.org/a/idsTW6KLHTbsq4Mj)
-
-## example 4
-[![asciicast](https://asciinema.org/a/cUYmGDGjp1NE2pXa.svg)](https://asciinema.org/a/cUYmGDGjp1NE2pXa)
-
-## example 5
-[![asciicast](https://asciinema.org/a/EHhgMBDuxJHV8ajc.svg)](https://asciinema.org/a/EHhgMBDuxJHV8ajc)
+## specify the format for the comparison result
+[![asciicast](https://asciinema.org/a/sqiQqbhrbrqhKQH0.svg)](https://asciinema.org/a/sqiQqbhrbrqhKQH0)
